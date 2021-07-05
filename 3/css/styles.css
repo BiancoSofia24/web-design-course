@@ -1,0 +1,37 @@
+body {
+    background-color: #eee;
+    width: 80%;
+    margin: auto;
+}
+
+nav {
+    background-color: teal;
+    height: 70px;
+}
+
+header {
+    background-color: hsl(39, 80%, 61%);
+    height: 200px;
+}
+
+footer {
+    background-color: teal;
+    min-height: 150px;
+
+    display: flex;
+}
+
+main {
+    background-color: hsl(39, 80%, 81%);
+    min-height: 200px;
+}
+
+div {
+    background-color: rgb(77, 29, 77);
+    height: 300px;
+}
+
+footer div {
+    background-color: #999;
+    width: 50%;
+}
