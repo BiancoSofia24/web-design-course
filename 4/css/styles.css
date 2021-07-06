@@ -52,7 +52,8 @@ li {
 }
 
 .footer .social-media a, 
-.section .text h3 {
+.section .text h3,
+.cards .card .card-body h3 {
     font-size: 1.5rem;
 }
 
@@ -142,13 +143,53 @@ li {
 /* Cards section */
 .cards {
     margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 0;
+}
+
+.cards .card {
+    padding: 1em;
+}
+
+/* .cards .card .card-head img {
+    width: 350px;
+} */
+
+.cards .card .card-head {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cards .card:nth-child(1) .card-head {
+    background: url("./../img/cat1.jpg") no-repeat center/cover;
+}
+
+.cards .card:nth-child(2) .card-head {
+    background: url("./../img/dog1.jpg") no-repeat center/cover;
+}
+
+.cards .card:nth-child(3) .card-head {
+    background: url("./../img/erizo.jpg") no-repeat center/cover;
+}
+
+.cards .card .card-body {
+    padding-top: 2em;
+    text-align: center;
+}
+
+.cards .card .card-body h3 {
+    padding-bottom: 0.5em;
 }
 
 /* Section 2 */
 .section {
     display: flex;
     align-items: center;
-    padding: 2em;
+    padding: 3em 2em;
 }
 
 .section .text {
@@ -161,7 +202,6 @@ li {
 
 .section .image img {
     width: 100%;
-    box-shadow: 5px 3px 10px 3px rgba(0, 0, 0, 0.1);
     box-shadow: -30px -20px var(--primary-200);
 }
 
@@ -172,4 +212,55 @@ li {
 .reverse .text {
     padding-left: 0;
     padding-right: 4em;
+}
+
+@media screen and (max-width: 1024px) {
+    .cards .card .card-head {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner .title {
+        font-size: 3rem;
+    }
+
+    .banner .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards .card .card-head {
+        margin: auto;
+    }
+
+    .cards .card {
+        padding-bottom: 3em;
+    }
+
+    .cards .card:last-child {
+        padding-bottom: 0;
+    }
+
+    .section .text h3,
+    .cards .card .card-body h3 {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        flex-direction: column;
+        padding: 3em 0;
+    }
+
+    .section .image {
+        width: 350px;
+    }
+
+    .section .text {
+        padding: 2em 4em 0;
+    }
 }
